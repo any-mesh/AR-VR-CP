@@ -1,0 +1,21 @@
+class Solution {
+    static String armstrongNumber(int n){
+        // code here
+        int d,count=(int)Math.log10(n)+1;;
+        double sum=0;
+        int c=n;
+        
+        while(c>0)
+        {
+            d=(int)c%10;
+            sum=sum+Math.pow(d,count);
+            c/=10;
+        }
+        
+        if(sum==n)
+        return("Yes");
+        else
+        return("No");
+        
+    }
+}

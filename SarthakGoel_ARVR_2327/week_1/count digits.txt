@@ -1,0 +1,17 @@
+class Solution{
+    static int evenlyDivides(int N){
+        // code here
+        int copy=N,c=0;
+        while(copy>0)
+        {   if(copy%10==0){
+            copy=copy/10;
+            continue;
+        }
+            if(N%(copy%10)==0){
+            ++c;
+            }
+            copy=copy/10;
+        }
+        return(c);
+    }
+}

@@ -1,0 +1,19 @@
+class Solution {
+    public int reverse(int x) {
+        int F=0;
+        long s=0;
+        if(x<0){
+        x=x*-1;
+        F=1;
+        }
+        while(x>0){
+        s=s*10+(x%10);
+        x=x/10;
+        }
+        if(s<Math.pow(-2,31)||s>(Math.pow(2,31)-1))
+        return 0;
+        if(F==1)
+        s=s*-1;
+        return (int)s;
+    }
+}
